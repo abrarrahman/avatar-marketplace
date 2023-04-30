@@ -1,10 +1,10 @@
-import useScreenSize from "@/common/hooks/useScreenSize";
+import useScreenSize from "@/hooks/useScreenSize";
 import avaTownLogo from "@/public/logo_avatown_manual_1_basi_inverse.png";
 import userAvatarImage from "@/public/user-avater.png";
 import Image from "next/image";
 import Link from "next/link";
 import ActionButton from "./components/ActionButton/ActionButton";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { BsCart } from "react-icons/bs";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import Search from "./components/Search/Search";
 
@@ -20,15 +20,19 @@ const Header = () => {
             width={isMobile() ? 120 : 200}
           />
         </Link>
-        {!isMobile() && <Link href="/" className="text-white text-sm md:text-xl underline">
-          Go to Market Page
-        </Link>}
+        {!isMobile() && (
+          <>
+            <Link href="/" className="text-white text-lg underline">
+              Go to Market Page
+            </Link>
+          </>
+        )}
         <div className="flex gap-3 md:order-last">
           <ActionButton contentCount={3}>
             <IoMdNotificationsOutline className="text-white w-6 h-6" />
           </ActionButton>
           <ActionButton contentCount={1}>
-            <AiOutlineShoppingCart className="text-white w-6 h-6 -ml-1" />
+            <BsCart className="text-white w-6 h-6 -ml-1" />
           </ActionButton>
           <ActionButton>
             <div className="bg-white rounded-xl overflow-hidden">
@@ -36,8 +40,8 @@ const Header = () => {
             </div>
           </ActionButton>
         </div>
-        <div className='w-full md:flex-1 md:max-w-md md:ml-auto'>
-          <Search/>
+        <div className="w-full md:flex-1 md:max-w-md md:ml-auto">
+          <Search />
         </div>
       </div>
     </div>

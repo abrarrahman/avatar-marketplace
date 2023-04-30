@@ -1,20 +1,28 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Header from '@/components/Header/Header'
+import { Inter } from "next/font/google";
+import Header from "@/components/Header/Header";
+import MarketPage from "@/modules/MarketPage/MarketPage";
+import {avatars  } from '@/mock/Avatar.mock'
+import { Avatar } from "@/interfaces/Avatar.interface";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
-const Home = () => {
+interface Props {
+  avatars: Avatar[];
+}
+
+const Home = ({avatars}: Props) => {
   return (
-    <main
-      className={`flex min-h-screen flex-col ${inter.className}`}
-    >
-      <Header/>
-      <div className="flex bg-red-500">
-        
-      </div>
+    <main className={`flex min-h-screen flex-col ${inter.className}`}>
+      <Header />
+      <MarketPage avatars={avatars}/>
     </main>
-  )
+  );
+};
+
+export async function getStaticProps() {
+  return {
+    props: { avatars },
+  };
 }
 
 export default Home;
