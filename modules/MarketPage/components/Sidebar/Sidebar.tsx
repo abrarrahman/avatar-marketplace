@@ -1,14 +1,14 @@
-import { FilterOptions } from "./constants/filterOptions";
+import { filterOptions } from "./constants/filterOptions";
 
 const Sidebar = () => {
   return (
     <div className="w-64 bg-white flex flex-col gap-3 p-4 text-xs">
-      {FilterOptions.map((filterOption) => {
+      {filterOptions.map((filterGroup) => {
         return (
-          <div key={filterOption.group.id}>
-            <h3 className="mb-1 font-bold">{filterOption.group.label}</h3>
+          <div key={filterGroup.id}>
+            <h3 className="mb-1 font-bold">{filterGroup.label}</h3>
             <div className="flex flex-col gap-1">
-            {filterOption.options.map(option=>{
+            {filterGroup.options.map(option=>{
               return <div key={option.id} className="flex ml-3">
                 <input type="checkbox" className="checkbox checkbox-xs rounded mr-2" />
                 <p className="font-medium">{option.label}</p>

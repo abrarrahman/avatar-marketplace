@@ -1,9 +1,7 @@
-export const FilterOptions = [
+export const filterOptions = [
   {
-    group: {
-      id: "category",
-      label: "Category",
-    },
+    id: "category",
+    label: "Category",
     options: [
       {
         id: "full",
@@ -16,10 +14,8 @@ export const FilterOptions = [
     ],
   },
   {
-    group: {
-      id: "content",
-      label: "Content",
-    },
+    id: "content",
+    label: "Content",
     options: [
       {
         id: "vrChatQuest",
@@ -36,10 +32,8 @@ export const FilterOptions = [
     ],
   },
   {
-    group: {
-      id: "price",
-      label: "Price",
-    },
+    id: "price",
+    label: "Price",
     options: [
       {
         id: "<10",
@@ -72,10 +66,8 @@ export const FilterOptions = [
     ],
   },
   {
-    group: {
-      id: "polygonAmount",
-      label: "Polygon amount",
-    },
+    id: "polygonAmount",
+    label: "Polygon amount",
     options: [
       {
         id: "<7500",
@@ -104,10 +96,8 @@ export const FilterOptions = [
     ],
   },
   {
-    group: {
-      id: "autoUploadSupport",
-      label: "Auto upload support",
-    },
+    id: "autoUploadSupport",
+    label: "Auto upload support",
     options: [
       {
         id: "supported",

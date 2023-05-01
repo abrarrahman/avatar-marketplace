@@ -5,6 +5,7 @@ import { HiChevronDown } from "react-icons/hi";
 import AvatarList from "./components/AvatarList/AvatarList";
 import { Avatar } from "@/interfaces/Avatar.interface";
 import { avatars } from "../../mock/Avatar.mock";
+import FilterDrawer from "./components/FilterDrawer/FilterDrawer";
 
 interface Props {
   avatars: Avatar[];
@@ -19,12 +20,10 @@ const MarketPage = ({ avatars }: Props) => {
           <h2 className="hidden md:inline">All Items</h2>
           <div className="flex flex-1 justify-between md:justify-end">
             <SortBySelect />
-            {isMobile() && <div className="flex items-center justify-center px-3 text-purpleAccent text-sm border-l">
-              Filters <HiChevronDown className="ml-2" />
-            </div>}
+            {isMobile() && <FilterDrawer />}
           </div>
         </div>
-        <AvatarList avatars={avatars}/>
+        <AvatarList avatars={avatars} />
       </div>
     </div>
   );
