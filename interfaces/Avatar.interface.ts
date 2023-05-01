@@ -4,10 +4,13 @@ export interface Avatar {
   id: string;
   title: string;
   description: string;
-  rating: number;
+  ratings: {
+    average: number;
+    count: number;
+  };
   likes: number;
   liked: boolean;
-  image: StaticImageData;
+  images: StaticImageData[];
   publisher: {
     name: string,
     image: StaticImageData;

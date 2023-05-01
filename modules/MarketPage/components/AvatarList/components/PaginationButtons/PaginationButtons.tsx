@@ -22,7 +22,7 @@ const PaginationButtons = ({
       <button
         onClick={() => setCurrentPage((prev) => (prev > 1 ? prev - 1 : prev))}
       >
-        <IoChevronBack className="hover:font-bold" />
+        <IoChevronBack />
       </button>
       {pageNumbers.map((number) => (
         <button

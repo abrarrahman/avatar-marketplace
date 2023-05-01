@@ -13,9 +13,17 @@ interface Props {
 
 const AvatarCard = ({ avatar }: Props) => {
   return (
-    <Link href={`/avatar/${avatar.id}`} key={avatar.id} className="bg-white rounded-lg flex flex-col hover:shadow-md transition-all duration-75 text-start">
+    <Link
+      href={`/avatar/${avatar.id}`}
+      key={avatar.id}
+      className="bg-white rounded-lg flex flex-col hover:shadow-md transition-all duration-75 text-start"
+    >
       <div className="relative">
-        <Image src={avatar.image} alt={avatar.title} className="rounded-lg" />
+        <Image
+          src={avatar.images[0]}
+          alt={avatar.title}
+          className="rounded-lg"
+        />
         <div className="absolute top-2.5 right-2.5">
           <AddToCartButton />
         </div>
@@ -24,9 +32,9 @@ const AvatarCard = ({ avatar }: Props) => {
         <h3 className="font-medium hover:text-redAccent">{avatar.title}</h3>
         <div className="flex items-center justify-between">
           <div className="flex gap-2">
-            <StarRating rating={avatar.rating} />
+            <StarRating rating={avatar.ratings.average} />
             <p className="text-mutedText text-xs">
-              {avatar.rating} & {avatar.likes} likes
+              {avatar.ratings.average} & {avatar.likes} likes
             </p>
           </div>
           <HeartToggle liked={avatar.liked} />

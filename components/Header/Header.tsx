@@ -20,13 +20,6 @@ const Header = () => {
             width={isMobile() ? 120 : 200}
           />
         </Link>
-        {!isMobile() && (
-          <>
-            <Link href="/" className="text-white text-lg underline">
-              Go to Market Page
-            </Link>
-          </>
-        )}
         <div className="flex gap-3 md:order-last">
           <ActionButton contentCount={3}>
             <IoMdNotificationsOutline className="text-white w-6 h-6" />

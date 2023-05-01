@@ -98,10 +98,6 @@ export const FilterOptions = [
         label: "△32,000 to △70,000",
       },
       {
-        id: "32000-70000",
-        label: "△32,000 to △70,000",
-      },
-      {
         id: ">70000",
         label: "△70,000 & Above",
       },

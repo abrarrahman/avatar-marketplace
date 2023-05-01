@@ -16,7 +16,13 @@ const Avatar = ({ avatar, error }: Props) => {
     <main className={`flex min-h-screen flex-col ${inter.className}`}>
       <Header />
       {error && <p>Avatar not found</p>}
-      {avatar && <AvatarPage avatar={avatar} />}
+      {avatar && (
+        <div className="flex-1 flex flex-col w-full items-center bg-white">
+          <div className="w-full" style={{ maxWidth: "1500px" }}>
+            <AvatarPage avatar={avatar} />
+          </div>
+        </div>
+      )}
     </main>
   );
 };

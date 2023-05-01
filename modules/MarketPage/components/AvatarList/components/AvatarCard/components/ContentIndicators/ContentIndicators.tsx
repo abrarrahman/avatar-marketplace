@@ -5,10 +5,6 @@ interface Props {
 }
 
 const ContentIndicators = ({ content }: Props) => {
-  useEffect(() => {
-    console.log(content.includes("vrChatPcVr"));
-  }, []);
-
   return (
     <div className="flex items-center gap-2">
       {content.includes("vrChatPcVr") && (
