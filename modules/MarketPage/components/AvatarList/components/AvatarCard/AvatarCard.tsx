@@ -13,7 +13,7 @@ interface Props {
 
 const AvatarCard = ({ avatar }: Props) => {
   return (
-    <Link href={`/avatar?id=${avatar.id}`} key={avatar.id} className="bg-white rounded-lg flex flex-col hover:shadow-md transition-all duration-75 text-start max-w-xs">
+    <Link href={`/avatar/${avatar.id}`} key={avatar.id} className="bg-white rounded-lg flex flex-col hover:shadow-md transition-all duration-75 text-start">
       <div className="relative">
         <Image src={avatar.image} alt={avatar.title} className="rounded-lg" />
         <div className="absolute top-2.5 right-2.5">

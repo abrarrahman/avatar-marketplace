@@ -1,4 +1,4 @@
-import {useLayoutEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 
 type ScreenSize = '4xl' | '3xl' | '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
 
@@ -35,7 +35,7 @@ export const useScreenSize = () => {
     }
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', updateScreenSize);
       updateScreenSize();

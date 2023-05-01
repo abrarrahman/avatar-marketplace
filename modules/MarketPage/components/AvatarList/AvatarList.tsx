@@ -11,7 +11,7 @@ interface Props {
 
 const AvatarList = ({ avatars }: Props) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 12;
+  const itemsPerPage = 10;
   const noOfPages = Math.ceil(avatars.length / itemsPerPage);
 
   const indexOfLastItem = currentPage * itemsPerPage;
