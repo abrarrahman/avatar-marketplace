@@ -2,14 +2,20 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First clone the repository:
 
 ```bash
+git clone https://github.com/abrarrahman/avatar-marketplace.git
+```
+
+Install the packages using npm:
+```bash
+npm i
+```
+
+Run the development server:
+```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
